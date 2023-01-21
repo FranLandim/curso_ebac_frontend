@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 650px;
+  width: 100%;
+}
+
+.container h2 {
+  color: rgb(255, 136, 0);
+  margin-bottom: 8px;
+  margin-left: 150px;
+}
+
+.container p {
+  margin-bottom: 10px;
+  margin-left: 150px;
+}
+
+form {
+  margin-top: 20px;
+  background-color: rgb(214, 223, 220);
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+button {
+  display: block;
+  padding: 5px;
+  margin-bottom: 8px;
+  width: 100%;
+  resize: none;
+}
+
+button {
+  background-color: rgb(107, 117, 117);
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(162, 173, 173);
+}
+
+.mensagemValidacao {
+  background-color: rgb(214, 223, 220);
+  color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 650px;
+  width: 100%;
+}

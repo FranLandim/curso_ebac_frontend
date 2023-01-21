@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário Validação - Tarefa 7</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="form-validacao">
+        <h2>Formulário de Validação</h2>
+        <p><b>Insira valores nos campos abaixo: </b></p>
+        <label for="fieldA">Campo A</label>
+        <input
+          id="Campo A"
+          type="number"
+          required
+          placeholder="Digite um numero"
+        />
+        <label for="fieldB">Campo B</label>
+        <input
+          id="Campo B"
+          type="number"
+          required
+          placeholder="Digite um numero"
+        />
+        <button type="submit">Validar</button>
+      </form>
+    </div>
+    <p class="mensagemValidacao"></p>
+    <script src="./main.js"></script>
+  </body>
+</html>
