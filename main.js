@@ -1,12 +1,26 @@
-let form = document.getElementById("form-validacao");
-form.addEventListener("submit", function (event) {
-  let fieldA = document.getElementById("Campo A").value;
-  let fieldB = document.getElementById("Campo B").value;
-  let message = document.querySelector(".mensagemValidacao");
-  if (fieldA > fieldB) {
-    message.textContent = "Campo A não pode ser maior que Campo B!";
-    event.preventDefault();
+const form = document.getElementById('form-validacao');
+const valorA = document.getElementById('Campo A');
+const valorB = document.getElementById('Campo B');
+let formEValido = false;
+
+function maiorMenor (fieldA, fieldB) {
+  return fieldB > fieldA;
+}
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  const mensagemSucesso = `O valor do Campo B <b>${valorB.value}</b> é maior que o valor do Campo A <b>${valorA.value}</b>.`;
+  const containerMensagemSucesso = document.querySelector('.success-message');
+  const containerMensagemErro = document.querySelector('.error-message');
+  formEValido = maiorMenor (valorA.value, valorB.value);
+  if (formEValido) {
+    containerMensagemSucesso.innerHTML = mensagemSucesso;
+    containerMensagemSucesso.style.display = 'block';
+    containerMensagemErro.style.display = 'none';
+    valorA.value = '';
+    valorB.value = '';
   } else {
-    message.textContent = "Formulário validado, Campo B é maior que Campo A!";
+    containerMensagemErro.style.display = 'block';
+    containerMensagemSucesso.style.display = 'none';
   }
 });

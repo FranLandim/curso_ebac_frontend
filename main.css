@@ -14,12 +14,10 @@
 .container h2 {
   color: rgb(255, 136, 0);
   margin-bottom: 8px;
-  margin-left: 150px;
 }
 
 .container p {
   margin-bottom: 10px;
-  margin-left: 150px;
 }
 
 form {
@@ -54,12 +52,26 @@ button:hover {
   background-color: rgb(162, 173, 173);
 }
 
-.mensagemValidacao {
+.success-message {
   background-color: rgb(214, 223, 220);
-  color: red;
+  color: green;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 650px;
   width: 100%;
+}
+
+.error-message {
+  padding 8px;
+  background-color: red;
+  color: #fff;
+  margin-bottom: 8px;
+  display: none;
+}
+
+input.error {
+  color: red;
+  border-color: red;
+  outline-color: red;
 }
